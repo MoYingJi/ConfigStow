@@ -6,7 +6,7 @@ while (( "$#" )); do
     real=$(realpath "$1")
     if [[ "$real" == "$(pwd)"/* ]]; then
         name=$(basename "$real")
-        echo "$name" >> .hidden
+        echo "$name" >> "$(dirname "$real")/.hidden"
         echo "Hidden $name ($real)"
     else echo "Skipping $1"; fi
     shift

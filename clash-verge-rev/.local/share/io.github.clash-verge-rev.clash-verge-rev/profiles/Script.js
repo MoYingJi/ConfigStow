@@ -2,10 +2,12 @@
 
 
 const prependRuleDomainSuffix = [
+    "archlinux.org",
     "bing.com",
-    "archlinux.org"
+    "mozilla.org",
 ]
 const prependRule = [
+    "DST-PORT,22,DIRECT", // SSH
     ...prependRuleDomainSuffix.map(domain => `DOMAIN-SUFFIX,${domain},DIRECT`),
 ]
 
