@@ -43,6 +43,10 @@ alias kate-which='do-which kate'
 
 alias encrypt-me='gpg --encrypt --recipient moyingjiaw@outlook.com'
 
+alias watch-mem='watch -n 2   -- free -h'
+alias watch-nvi='watch -n 0.5 -- nvidia-smi'
+alias watch-nft='watch -n 0.2 -- sudo nft list ruleset'
+
 ## 替代
 alias ls='eza'
 
