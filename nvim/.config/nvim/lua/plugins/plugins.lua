@@ -11,7 +11,7 @@ return {
         -- 状态栏
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
-        config = function() require("lualine").setup() end,
+        config = function() require("lualine").setup {} end,
     },
 
     {
@@ -20,5 +20,6 @@ return {
         branch = 'master',
         lazy = false,
         build = ":TSUpdate",
+        config = function() require("nvim-treesitter.configs").setup {} end,
     }
 }

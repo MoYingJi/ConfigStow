@@ -9,6 +9,16 @@ set COMMON_SHELL_PROFILE_DIR $XDG_CONFIG_DIR/shell
 export COMMON_SHELL_PROFILE_DIR
 source $COMMON_SHELL_PROFILE_DIR/profile.sh
 
+function fish_greeting
+    echo "主人你回来啦！欢迎主人喵！本猫鱼儿会一直陪伴在主人身边的喵！"
+end
+
+
+function clear
+    /usr/bin/clear
+    fish_greeting
+end
+
 
 if status is-interactive
     # 初始化

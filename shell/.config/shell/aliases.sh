@@ -28,6 +28,8 @@ alias p='paru'
 
 alias vi='nvim'
 
+alias syu='sudo pacman -Syu'
+
 alias gc='git clone'
 
 alias sys='systemctl'
@@ -35,7 +37,7 @@ alias sys-en='systemctl enable --now'
 
 alias k9='kill -9'
 alias pk9='pkill -9'
-alias pkexe='pkill \.exe'
+alias pkexe='pkill .exe'
 
 alias bat-which='do-which bat'
 alias edit-which='do-which $EDITOR'
@@ -52,7 +54,7 @@ alias ls='eza'
 
 ## 参数
 alias ycr='yc -R'
-alias ycs='yc -S' # 其目的是重新安装 比如 `-git`
+alias ycs='yc -S'
 alias ycq='yc -Q'
 alias ycl='yc -Ql'
 alias ys='yay -S'
