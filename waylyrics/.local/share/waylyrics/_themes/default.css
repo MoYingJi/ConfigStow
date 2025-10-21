@@ -17,6 +17,10 @@ window#main-window {
   font-family: "Mi Sans";
 }
 
+:lang(ja) {
+  font-family: "Noto Sans CJK JP";
+}
+
 
 label#above, label#below {
   padding: 10px;

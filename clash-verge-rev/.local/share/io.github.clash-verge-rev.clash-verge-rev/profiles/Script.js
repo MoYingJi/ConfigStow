@@ -4,8 +4,11 @@
 const prependRuleDomainSuffix = [
     "archlinux.org",
     "bing.com",
+    "codeberg.org",
+    "d2learn.org",
     "ghfast.top",
     "mozilla.org",
+    "office365.com",
 ]
 const prependRule = [
     "DST-PORT,22,DIRECT", // SSH 端口 22 直连

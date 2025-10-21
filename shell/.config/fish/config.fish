@@ -2,6 +2,8 @@
 
 [ -z "$XDG_CONFIG_DIR" ] && set XDG_CONFIG_DIR "$HOME/.config"
 
+test ! -e "$HOME/.x-cmd.root/local/data/fish/rc.fish" || source "$HOME/.x-cmd.root/local/data/fish/rc.fish"
+
 set SPEC_SHELL_PROFILE $XDG_CONFIG_DIR/fish/config.fish
 export SPEC_SHELL_PROFILE
 
@@ -32,6 +34,3 @@ function mkcd -d "创建目录并进入"
     mkdir -p $argv[1]
     cd $argv[1]
 end
-
-
-

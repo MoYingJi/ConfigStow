@@ -21,3 +21,5 @@ ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 [[ ! -d $ZSH_CACHE_DIR ]] && mkdir "$ZSH_CACHE_DIR"
 source $ZSH/oh-my-zsh.sh
 
+
+[ ! -f "$HOME/.x-cmd.root/X" ] || . "$HOME/.x-cmd.root/X" # boot up x-cmd.

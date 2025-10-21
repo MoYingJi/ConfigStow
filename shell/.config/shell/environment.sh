@@ -8,6 +8,7 @@ export PATH="$PNPM_HOME:$PATH"
 # Path
 export PATH="/home/dengh/.local/bin/:$PATH"
 export PATH="/home/dengh/.local/binInject/:$PATH"
+export PATH="/home/dengh/.local/binCmd/:$PATH"
 export PATH="/home/dengh/.local/binScript/:$PATH"
 
 
