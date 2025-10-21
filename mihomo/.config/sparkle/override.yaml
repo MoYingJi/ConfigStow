@@ -1,0 +1,12 @@
+items:
+    - id: Script
+      name: Script.js
+      type: local
+      ext: js
+      global: true
+
+    - id: Merge
+      name: Merge.yaml
+      type: local
+      ext: yaml
+      global: true
