@@ -1,7 +1,13 @@
 // Global Script
 
-const prependRulesDomainSuffix = [
+const processDirect = [
+    "sparkle",
+    "SPlayer",
+]
+
+const domainDirect = [
     "archlinux.org",
+    "archlinuxcn.org",
     "bing.com",
     "codeberg.org",
     "d2learn.org",
@@ -9,9 +15,11 @@ const prependRulesDomainSuffix = [
     "mozilla.org",
     "office365.com",
 ]
+
 const prependRules = [
     "DST-PORT,22,DIRECT", // SSH 端口 22 直连
-    ...prependRulesDomainSuffix.map(domain => `DOMAIN-SUFFIX,${domain},DIRECT`),
+    ...processDirect.map(process => `PROCESS-NAME,${process},DIRECT`),
+    ...domainDirect.map(domain => `DOMAIN-SUFFIX,${domain},DIRECT`),
 ]
 
 function main(config) {
