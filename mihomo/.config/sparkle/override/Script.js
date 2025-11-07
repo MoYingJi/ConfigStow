@@ -8,12 +8,16 @@ const processDirect = [
 const domainDirect = [
     "archlinux.org",
     "archlinuxcn.org",
+    "bgithub.xyz",
     "bing.com",
     "codeberg.org",
     "d2learn.org",
     "ghfast.top",
     "mozilla.org",
     "office365.com",
+    "outlook.live.com",
+    "stevexmh.net",
+    "vuejs.org",
 ]
 
 const prependRules = [
