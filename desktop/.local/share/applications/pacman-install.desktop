@@ -9,6 +9,7 @@ Comment[zh_CN]=使用 Pacman 命令行安装软件包
 Comment=Use Pacman CLI to install packages
 
 Exec=/usr/bin/pkexec /usr/bin/pacman -U %u
+TryExec=/usr/bin/pkexec;/usr/bin/pacman
 Terminal=true
 NoDisplay=true
 
