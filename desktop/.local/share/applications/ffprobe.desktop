@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Application
+Icon=package-x-generic
+
+Name[zh_CN]=FFProbe 输出信息
+Name=FFProbe Output Info
+
+Comment[zh_CN]=使用 FFProbe 输出多媒体文件信息
+Comment=Use FFProbe to output media file info
+
+Exec=/usr/bin/sh -c "/usr/bin/ffprobe -i \\"\\$1\\"; read" sh "%U"
+Terminal=true
+NoDisplay=true
+
+Categories=AudioVideo;Video;Audio;
+MimeType=video/*;audio/*;application/octet-stream;

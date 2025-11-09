@@ -13,6 +13,7 @@ const domainDirect = [
     "codeberg.org",
     "d2learn.org",
     "ghfast.top",
+    "miyoushe.com",
     "mozilla.org",
     "office365.com",
     "outlook.live.com",

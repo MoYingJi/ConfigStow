@@ -11,4 +11,5 @@ Comment=Use Pacman CLI to install packages
 Exec=/usr/bin/pkexec /usr/bin/pacman -U %u
 Terminal=true
 NoDisplay=true
+
 MimeType=application/x-pacman
