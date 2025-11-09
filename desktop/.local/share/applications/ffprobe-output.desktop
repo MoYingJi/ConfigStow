@@ -8,7 +8,7 @@ Name=FFProbe Output Info
 Comment[zh_CN]=使用 FFProbe 输出多媒体文件信息
 Comment=Use FFProbe to output media file info
 
-Exec=/usr/bin/bash -c "/usr/bin/ffprobe -i \\"\\$1\\"; read" bash "%U"
+Exec=/usr/bin/sh -c "/usr/bin/ffprobe -i \\"\\$1\\"; read" sh "%U"
 TryExec=/usr/bin/ffprobe
 Terminal=true
 NoDisplay=true
