@@ -49,20 +49,33 @@ alias watch-mem='watch -n 2   -- free -h'
 alias watch-nvi='watch -n 0.5 -- nvidia-smi'
 alias watch-nft='watch -n 0.2 -- sudo nft list ruleset'
 
-## 替代
-alias ls='eza'
+alias sude='sudo -E'
 
-## 参数
+## ls
+alias ls='eza \
+    --time-style long-iso \
+    --group-directories-first \
+    --icons \
+    --header \
+    --binary \
+    --group \
+    --git \
+'
+
+alias ll='ls --long'
+alias la='ll --all'
+
+## BBDown
+alias bbdown='BBDown \
+    --encoding-priority av1,hevc,avc \
+'
+
+## Package Manage
 alias ycr='yc -R'
 alias ycs='yc -S'
 alias ycq='yc -Q'
 alias ycl='yc -Ql'
 alias ys='yay -S'
-alias ll='ls -lg'
-alias sude='sudo -E'
-
-## 参数 - 配置
-alias bbdown='BBDown --encoding-priority av1,hevc,avc'
 
 ## 目录
 alias tmp='cd /tmp'

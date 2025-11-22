@@ -1,6 +1,8 @@
 #!/usr/bin/bash
 
 [ -z "$MIRROR" ] && MIRROR="https://ghfast.top/"
+[ "$MIRROR" = "x" ] && MIRROR="https://"
+[ "$MIRROR" = "-" ] && MIRROR=""
 
 # GitHub Mirror - Curl
 
