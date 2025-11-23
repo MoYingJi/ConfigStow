@@ -1,10 +1,19 @@
 #!/usr/bin/bash
 #shellcheck disable=2012
 
+# 依赖:
+#   fzf
+#   code
+# 环境:
+#   $VSCODE_OPEN := "code"
+#   $WORKSPACES  := "$(xdg-user-dir DOCUMENTS)/CodeWorkspace"
+#     | 存有 .code-workspace 文件的目录
+
 # Code Workspace
 # 根据文件名 调用 code 打开指定工作区
 
 [ -z "$WORKSPACES" ] && WORKSPACES="$(xdg-user-dir DOCUMENTS)/CodeWorkspace"
+[ -z "$VSCODE_OPEN" ] && VSCODE_OPEN="code"
 
 [ -n "$1" ] && FZF_ARGS+=("--query" "$1")
 
@@ -20,4 +29,4 @@ fi
 [ -f "$WORKSPACE_PATH" ] || exit 1
 
 # 调用 code 打开指定工作区
-code "$WORKSPACE_PATH"
+$VSCODE_OPEN "$WORKSPACE_PATH"

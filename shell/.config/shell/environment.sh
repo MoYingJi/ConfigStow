@@ -1,6 +1,8 @@
 #!/usr/bin/bash
 #shellcheck disable=SC2155
 
+# 只允许兼容 export a="b" 这种形式的 shell 调用！
+
 # Home Path
 export PNPM_HOME="/home/dengh/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
@@ -17,13 +19,13 @@ export PATH="/home/dengh/.local/binScript/:$PATH"
 export XMODIFIERS=@im=fcitx
 #export QT_IM_MODULE="fcitx"
 
-export EDITOR="nvim"
-export OUTER_EDITOR="kate"
-export TLDR_LANGUAGE=zh
+export EDITOR="nvim"               # 阻塞 否则会造成兼容性问题
+export EXTERNAL_EDITOR="kate"      # 随你便
+
 export STOW_DIR="$(xdg-user-dir PUBLICSHARE)/stow"
 
-# Man Pager
-export MANPAGER="nvim +Man!"
+export TLDR_LANGUAGE="zh"
+export MANPAGER="nvim +Man!" # Man Pager
 
 
 # === 换源 === #

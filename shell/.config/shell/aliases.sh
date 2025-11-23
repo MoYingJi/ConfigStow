@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
-# 只允许兼容 alias a='b' 这种形式的 shell 调用!
+# 只允许兼容 alias a='b' 这种形式的 shell 调用！
 
 # Profile Edit
-alias edit='$OUTER_EDITOR'
+alias edit='$EXTERNAL_EDITOR'
 alias kp='kate $COMMON_SHELL_PROFILE_DIR $COMMON_SHELL_PROFILE_DIR/profile.sh'
 alias ep='edit $COMMON_SHELL_PROFILE_DIR/profile.sh'
 alias epa='edit $COMMON_SHELL_PROFILE_DIR/aliases.sh'
@@ -19,6 +19,9 @@ alias refx='_REF=1 source $SPEC_SHELL_PROFILE'
 
 alias ege='edit /etc/environment'
 alias egp='edit /etc/profile'
+
+alias e-kate='export EDITOR="kate -b"'
+alias e-nvim='export EDITOR="nvim"'
 
 ## 短名
 alias c='clear'
@@ -60,7 +63,7 @@ alias ls='eza \
     --binary \
     --group \
     --git \
-'
+' # End of `alias ls`
 
 alias ll='ls --long'
 alias la='ll --all'
@@ -68,7 +71,7 @@ alias la='ll --all'
 ## BBDown
 alias bbdown='BBDown \
     --encoding-priority av1,hevc,avc \
-'
+' # End of `alias bbdown`
 
 ## Package Manage
 alias ycr='yc -R'
