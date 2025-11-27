@@ -25,7 +25,7 @@ const domainDirect = [
 ]
 
 const prependRules = [
-    "DST-PORT,22,PASS", // SSH 端口 22
+    "DST-PORT,22,DIRECT", // SSH 端口 22
     ...processDirect.map(process => `PROCESS-NAME,${process},DIRECT`),
     ...domainDirect.map(domain => `DOMAIN-SUFFIX,${domain},DIRECT`),
 ]
