@@ -1,0 +1,36 @@
+{
+    "editor.fontSize": 16,
+    "editor.fontFamily": "monospace, 'JetBrainsMono Nerd Font', 'Jetbrains Maple Mono', sans-serif, 'Mi Sans', 'HarmonyOS Sans SC', 'Noto Sans CJK SC'",
+    "editor.fontLigatures": true,
+
+    "editor.mouseWheelZoom": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "smooth",
+    "editor.smoothScrolling": true,
+    "editor.wrappingStrategy": "advanced",
+
+    "workbench.tree.indent": 20,
+    "workbench.list.smoothScrolling": true,
+
+    "security.workspace.trust.enabled": false,
+
+    "files.associations": {
+        "*.ttml": "xml",
+    },
+
+    "git.autofetch": true,
+    "git.confirmSync": true,
+
+    "python.defaultInterpreterPath": "/usr/bin/python",
+
+    "commentAnchors.epic.provideAutoCompletion": false,
+    "commentAnchors.tags.provideAutoCompletion": false,
+
+    "Lingma.cloudModelAutoTriggerGenerateLength": "medium",
+    "Lingma.cloudModelManualTriggerGenerateLength": "long",
+
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+    "C_Cpp.default.cppStandard": "gnu++26",
+
+    "redhat.telemetry.enabled": true,
+}
