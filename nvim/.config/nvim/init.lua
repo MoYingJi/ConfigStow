@@ -1,11 +1,8 @@
--- Lazy Nvim
+-- 加载 lazy.nvim
 require("config.lazy")
 
--- Nvim Config
+-- 配置 Neovim
 require("config.nvim")
 
--- Plugins Configs
-
-require('nvim-treesitter.configs').setup {
-    auto_install = true
-}
+-- 自定义脚本
+require("scripts.im-switcher")

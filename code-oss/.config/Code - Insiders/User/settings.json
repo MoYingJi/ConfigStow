@@ -26,8 +26,10 @@
     "commentAnchors.epic.provideAutoCompletion": false,
     "commentAnchors.tags.provideAutoCompletion": false,
 
-    "Lingma.cloudModelAutoTriggerGenerateLength": "medium",
+    "Lingma.cloudModelAutoTriggerGenerateLength": "disable",
     "Lingma.cloudModelManualTriggerGenerateLength": "long",
+    // lingma 会将含有 shebang 但没有后缀的文件视为 plaintext 从而不补全
+    "Lingma.cloudModelLanguagesOrFileExtensions": "",
 
     "C_Cpp.default.compilerPath": "/usr/bin/clang++",
     "C_Cpp.default.cppStandard": "gnu++26",

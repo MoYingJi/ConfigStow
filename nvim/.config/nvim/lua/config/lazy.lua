@@ -1,8 +1,12 @@
+---@diagnostic disable: undefined-global
+
+local url_format = "git@github.com:%s.git" -- Git SSH
+
 -- 初始化 lazy.nvim
 --               ~/.local/share/nvim/
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-    local lazyrepo = "git@github.com:folke/lazy.nvim.git"
+    local lazyrepo = url_format:format("folke/lazy.nvim")
     local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
     if vim.v.shell_error ~= 0 then
         vim.api.nvim_echo({
@@ -31,11 +35,10 @@ require("lazy").setup({
     -- https://lazy.folke.io/configuration
     git = {
         -- 用于克隆插件的 URL 格式
-        url_format = "git@github.com:%s.git",
+        url_format = url_format,
     },
     -- 安装插件时将使用的配色方案
     install = { colorscheme = { "habamax" } },
     -- 自动检查插件更新
     checker = { enabled = true },
 })
-

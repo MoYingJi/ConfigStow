@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 return {
     {
         -- 主题
@@ -20,6 +22,8 @@ return {
         branch = 'master',
         lazy = false,
         build = ":TSUpdate",
-        config = function() require("nvim-treesitter.configs").setup {} end,
-    }
+        config = function() require('nvim-treesitter.configs').setup {
+            auto_install = true
+        } end,
+    },
 }

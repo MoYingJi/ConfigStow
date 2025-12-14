@@ -1,6 +1,14 @@
 -- Source: https://github.com/FinnRaze/mpv-stats-zh/blob/master/stats.lua
 -- License: GPL-2.0-only
 
+--- @diagnostic disable:
+---     assign-type-mismatch,
+---     unnecessary-if,
+---     need-check-nil,
+---     param-type-mismatch,
+---     global-in-non-module,
+---     redundant-parameter
+
 -- Display some stats.
 --
 -- Please consult the readme for information about usage and configuration:
