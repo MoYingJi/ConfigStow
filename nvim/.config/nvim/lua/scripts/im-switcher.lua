@@ -2,19 +2,15 @@
 
 -- 作者: DeepSeek 大人 (有修改)
 
--- 保存 fcitx5 状态的变量（缓冲区局部变量，更符合插件原意）
--- 使用数字表示状态：1 关闭, 2 开启, 其他值 未知/错误
-local fcitx5_state = 1
-
 -- 辅助函数：执行命令并返回修剪后的输出（移除首尾空白和换行）
 local function get_system_output(cmd)
     local handle = io.popen(cmd)
-    if not handle then return nil end
+    if not handle then return 0 end
     local result = handle:read("*a")
     handle:close()
     -- 去除尾部换行，并转换为数字
     result = result:gsub("%s+$", "")
-    return math.tointeger(tonumber(result))
+    return math.floor(tonumber(result) or 0)
 end
 
 -- 辅助函数：执行命令（不关心输出）
@@ -24,12 +20,13 @@ end
 
 -- 输入法状态相关函数
 
-local function im_status() return get_system_output("fcitx5-remote") or 1 end
+local function im_status() return get_system_output("fcitx5-remote") end
 local function im_close() exec_system("fcitx5-remote -c") end
 local function im_open() exec_system("fcitx5-remote -o") end
 
 
 -- 保存状态
+-- 0: 未知; 1: 关闭; 2: 开启
 local fcitx5_prev_state = 0
 
 -- 定义自动命令组（便于管理）

@@ -1,17 +1,19 @@
 // Global Script
 
 const processDirect = [
-    "sparkle",
-    "SPlayer",
+    // "sparkle",
+    // "SPlayer",
 ]
 
 const domainDirect = [
     "archlinux.org",
     "archlinuxcn.org",
     "bgithub.xyz",
+    "bikonoo.com",
     "bing.com",
     "codeberg.org",
     "d2learn.org",
+    "firefox.com",
     "ghfast.top",
     "miyoushe.com",
     "mozilla.org",
@@ -29,9 +31,15 @@ const prependRules = [
     ...processDirect.map(process => `PROCESS-NAME,${process},DIRECT`),
     ...domainDirect.map(domain => `DOMAIN-SUFFIX,${domain},DIRECT`),
 ]
+const appendRules = [
+    "GEOIP,CN,DIRECT",
+]
 
 function main(config) {
     config.rules = prependRules.concat(config.rules)
+
+    const fallbackRuleIndex = config.rules.length - 1
+    config.rules.splice(fallbackRuleIndex, 0, ...appendRules)
 
     return config
 }
