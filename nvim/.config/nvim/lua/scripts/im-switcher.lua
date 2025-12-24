@@ -29,25 +29,31 @@ local function im_open() exec_system("fcitx5-remote -o") end
 -- 0: 未知; 1: 关闭; 2: 开启
 local fcitx5_prev_state = 0
 
+local function im_save_and_close()
+    fcitx5_prev_state = im_status()
+    im_close()
+end
+
+local function im_restore()
+    if fcitx5_prev_state == 2 then
+        im_open()
+    end
+end
+
 -- 定义自动命令组（便于管理）
 local fcitx5_group = vim.api.nvim_create_augroup("Fcitx5AutoCmd", { clear = true })
 
 -- 退出插入模式时：保存状态并关闭输入法
 vim.api.nvim_create_autocmd({ "InsertLeave", "CmdlineLeave" }, {
     group = fcitx5_group,
-    callback = function()
-        fcitx5_prev_state = im_status()
-        im_close()
-    end
+    callback = im_save_and_close
 })
 
 -- 进入插入模式时：如果之前状态是开启，则重新打开
 vim.api.nvim_create_autocmd({ "InsertEnter" }, {
     group = fcitx5_group,
-    callback = function()
-        -- fcitx5-remote 为 2 表示「开启」
-        if fcitx5_prev_state == 2 then
-            im_open()
-        end
-    end
+    callback = im_restore
 })
+
+-- 在启动时先关闭输入法并保存状态，因为此时是 NORMOR MODE
+im_save_and_close()

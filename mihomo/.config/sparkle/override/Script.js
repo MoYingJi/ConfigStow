@@ -18,6 +18,7 @@ const domainDirect = [
     "miyoushe.com",
     "mozilla.org",
     "naiveui.com",
+    "npmmirror.com",
     "office365.com",
     // "open.spotify.com",
     "outlook.live.com",

@@ -71,7 +71,6 @@ alias la='ll --all'
 ## BBDown
     # `--multi-file-pattern` 参数的 `/` 是路径分隔符，视频在文件夹内
 alias bbdown='BBDown \
-    --encoding-priority av1,hevc,avc \
     --file-pattern "<videoTitle> [<bvid>]" \
     --multi-file-pattern "<videoTitle> [<bvid>]/[P<pageNumberWithZero>] <pageTitle>" \
 ' # End of `alias bbdown`
