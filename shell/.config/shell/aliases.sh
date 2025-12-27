@@ -80,7 +80,7 @@ alias yt-dlp='yt-dlp \
     --cookies-from-browser firefox \
     --embed-metadata \
     --embed-thumbnail \
-' # End of `yt-dlp`
+' # End of `alias yt-dlp`
 
 ## Package Manage
 alias ycr='yc -R'
