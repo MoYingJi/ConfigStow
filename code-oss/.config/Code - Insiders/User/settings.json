@@ -1,5 +1,7 @@
 {
-    "editor.fontSize": 16,
+    "window.zoomLevel": 1.8,
+
+    "editor.fontSize": 14,
     "editor.fontFamily": "monospace, 'JetBrainsMono Nerd Font', 'Jetbrains Maple Mono', sans-serif, 'Mi Sans', 'HarmonyOS Sans SC', 'Noto Sans CJK SC'",
     "editor.fontLigatures": true,
 
@@ -34,5 +36,7 @@
     "C_Cpp.default.compilerPath": "/usr/bin/clang++",
     "C_Cpp.default.cppStandard": "gnu++26",
 
-    "redhat.telemetry.enabled": true,
+    "i18n-ally.displayLanguage": "zh-CN",
+    "i18n-ally.annotations": true,
+    "i18n-ally.extract.keyMaxLength": -1,
 }

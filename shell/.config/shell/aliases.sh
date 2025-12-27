@@ -75,6 +75,13 @@ alias bbdown='BBDown \
     --multi-file-pattern "<videoTitle> [<bvid>]/[P<pageNumberWithZero>] <pageTitle>" \
 ' # End of `alias bbdown`
 
+## yt-dlp
+alias yt-dlp='yt-dlp \
+    --cookies-from-browser firefox \
+    --embed-metadata \
+    --embed-thumbnail \
+' # End of `yt-dlp`
+
 ## Package Manage
 alias ycr='yc -R'
 alias ycs='yc -S'

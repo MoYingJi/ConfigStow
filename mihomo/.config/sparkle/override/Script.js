@@ -15,6 +15,7 @@ const domainDirect = [
     "d2learn.org",
     "firefox.com",
     "ghfast.top",
+    "imsyy.top",
     "miyoushe.com",
     "mozilla.org",
     "naiveui.com",
