@@ -17,6 +17,7 @@ const domainDirect = [
     "ghfast.top",
     "imsyy.top",
     "miyoushe.com",
+    "modrinth.com",
     "mozilla.org",
     "naiveui.com",
     "npmmirror.com",

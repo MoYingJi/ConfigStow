@@ -39,4 +39,7 @@
     "i18n-ally.displayLanguage": "zh-CN",
     "i18n-ally.annotations": true,
     "i18n-ally.extract.keyMaxLength": -1,
+
+    "rust-analyzer.check.command": "clippy",
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
 }
