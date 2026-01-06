@@ -4,6 +4,8 @@
 [ "$MIRROR" = "x" ] && MIRROR="https://"
 [ "$MIRROR" = "-" ] && MIRROR=""
 
+[ -z "$CURL" ] && CURL="/usr/bin/curl"
+
 # GitHub Mirror - Curl
 
 replace-url() {
@@ -31,9 +33,9 @@ for arg in "$@"; do
 done
 
 if [[ "$CR_STDOUT" ]]; then
-    echo [gcurl] /usr/bin/curl "${replaced_args[@]}"
+    echo [gcurl] "$CURL" "${replaced_args[@]}"
 elif ! [[ "$CR_NOINFO" ]]; then
-    echo [gcurl] /usr/bin/curl "${replaced_args[@]}" >&2
+    echo [gcurl] "$CURL" "${replaced_args[@]}" >&2
 fi
 
-/usr/bin/curl "${replaced_args[@]}"
+$CURL "${replaced_args[@]}"

@@ -18,6 +18,7 @@ const domainDirect = [
     "imsyy.top",
     "miyoushe.com",
     "modrinth.com",
+    "moyingji.one",
     "mozilla.org",
     "naiveui.com",
     "npmmirror.com",

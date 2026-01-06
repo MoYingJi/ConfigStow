@@ -10,6 +10,7 @@
     "editor.cursorBlinking": "smooth",
     "editor.smoothScrolling": true,
     "editor.wrappingStrategy": "advanced",
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
 
     "workbench.tree.indent": 20,
     "workbench.list.smoothScrolling": true,
@@ -41,5 +42,6 @@
     "i18n-ally.extract.keyMaxLength": -1,
 
     "rust-analyzer.check.command": "clippy",
-    "editor.formatOnSaveMode": "modificationsIfAvailable",
+
+    "redhat.telemetry.enabled": false, // 你想干嘛？
 }
