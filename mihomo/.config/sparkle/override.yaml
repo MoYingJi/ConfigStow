@@ -1,12 +1,18 @@
 items:
-    - id: Script
-      name: Script.js
-      type: local
+    - name: Securt Script
+      id: _security
       ext: js
+      type: local
       global: true
 
-    - id: Merge
-      name: Merge.yaml
+    - name: Global Script
+      id: Script
+      ext: js
       type: local
+      global: true
+
+    - name: Global Merge
+      id: Merge
       ext: yaml
+      type: local
       global: true
