@@ -9,12 +9,14 @@
 [ -z "$COPY" ] && COPY="wl-copy"
 [ "$COPY" = "-" ] && COPY=""
 
+[ -z "$DOMAIN" ] && DOMAIN="xiyou.me"
+
 source "$SECURITY_FILE"
 
-[ -z "$XIYOU_AUTH" ]  && exit 1
+[ -z "$XIYOU_AUTH" ] && exit 1
 
 data="$(
-    curl "https://xiyou.me/api/v1/user/getSubscribe" \
+    curl "https://$DOMAIN/api/v1/user/getSubscribe" \
         --silent \
         --compressed \
         -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0" \
@@ -24,9 +26,9 @@ data="$(
         -H "Authorization: $XIYOU_AUTH" \
         -H "DNT: 1" \
         -H "Sec-GPC: 1" \
-        -H "Alt-Used: xiyou.me" \
+        -H "Alt-Used: $DOMAIN" \
         -H "Connection: keep-alive" \
-        -H "Referer: https://xiyou.me/dashboard" \
+        -H "Referer: https://$DOMAIN/dashboard" \
         -H "Sec-Fetch-Dest: empty" \
         -H "Sec-Fetch-Mode: cors" \
         -H "Sec-Fetch-Site: same-origin" \

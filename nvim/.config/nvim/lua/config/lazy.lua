@@ -1,4 +1,5 @@
----@diagnostic disable: undefined-global
+---@diagnostic disable-next-line: undefined-global
+local vim = vim
 
 local url_format = "git@github.com:%s.git" -- Git SSH
 
@@ -40,5 +41,5 @@ require("lazy").setup({
     -- 安装插件时将使用的配色方案
     install = { colorscheme = { "habamax" } },
     -- 自动检查插件更新
-    checker = { enabled = true },
+    checker = { enabled = false },
 })

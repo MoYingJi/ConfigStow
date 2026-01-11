@@ -1,4 +1,5 @@
----@diagnostic disable: undefined-global
+---@diagnostic disable-next-line: undefined-global
+local vim = vim
 
 return {
     {

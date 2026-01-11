@@ -1,4 +1,5 @@
----@diagnostic disable: undefined-global
+---@diagnostic disable-next-line: undefined-global
+local vim = vim
 
 -- 作者: DeepSeek 大人 (有修改)
 

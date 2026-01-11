@@ -1,4 +1,6 @@
 ---@diagnostic disable: undefined-global
+local vim = vim
+
 local opt = vim.opt
 
 -- 缩进
