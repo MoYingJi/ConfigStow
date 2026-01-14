@@ -1,0 +1,11 @@
+[Unit]
+Description=Backup KDE Wallet
+After=kwalletd6.service
+
+[Service]
+Type = oneshot
+ExecStart=%h/.local/binService/kwallet-backup %h/.local/share/kwalletd
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

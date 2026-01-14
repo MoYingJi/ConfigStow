@@ -21,6 +21,7 @@ const domainDirect = [
     "moyingji.one",
     "mozilla.org",
     "naiveui.com",
+    "natchecker.com",
     "npmmirror.com",
     "office365.com",
     // "open.spotify.com",
