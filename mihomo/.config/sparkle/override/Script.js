@@ -31,20 +31,38 @@ const domainDirect = [
     "vuejs.org",
 ]
 
+
 const prependRules = [
     "DST-PORT,22,DIRECT", // SSH 端口 22
     ...processDirect.map(process => `PROCESS-NAME,${process},DIRECT`),
     ...domainDirect.map(domain => `DOMAIN-SUFFIX,${domain},DIRECT`),
 ]
+
 const appendRules = [
     "GEOIP,CN,DIRECT",
 ]
 
+
 function main(config) {
-    config.rules = prependRules.concat(config.rules)
+    // 获取第一个类型为选择的代理组的名称（作为默认代理）
+    const PROXY = config["proxy-groups"]
+        .find((group) => group.type === "select")
+        .name
 
+    // 替换用户规则中的 PROXY
+    const mapRule = (rules) => rules
+        .map((rule) => rule.replace(/,PROXY$/, `,${PROXY}`))
+
+    // 替换
+    const prependRulesReplaced = mapRule(prependRules)
+    const appendRulesReplaced = mapRule(appendRules)
+
+    // 插入前置规则
+    config.rules = prependRulesReplaced.concat(config.rules)
+    // 插入后置规则
     const fallbackRuleIndex = config.rules.length - 1
-    config.rules.splice(fallbackRuleIndex, 0, ...appendRules)
+    config.rules.splice(fallbackRuleIndex, 0, ...appendRulesReplaced)
 
+    // 返回
     return config
 }
