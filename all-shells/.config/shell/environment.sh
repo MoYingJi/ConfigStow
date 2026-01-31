@@ -32,9 +32,9 @@ export MANPAGER="nvim +Man!" # Man Pager
 
 export UV_DEFAULT_INDEX="https://mirrors.aliyun.com/pypi/simple"
 
-# 清华源总出问题 说我所在子网大量下载文件 保证正常用户所以阻断此类请求
-# 有病吧 我不是正常用户吗 还是你cn的全市都是一个子网又发力了 傻逼运营商也是
-#export RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
-#export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
-export RUSTUP_UPDATE_ROOT=https://mirrors.aliyun.com/rustup/rustup
-export RUSTUP_DIST_SERVER=https://mirrors.aliyun.com/rustup
+#export RUSTUP_UPDATE_ROOT="https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup"
+#export RUSTUP_DIST_SERVER="https://mirrors.tuna.tsinghua.edu.cn/rustup"
+#export RUSTUP_UPDATE_ROOT="https://mirrors.aliyun.com/rustup/rustup"
+#export RUSTUP_DIST_SERVER="https://mirrors.aliyun.com/rustup"
+export RUSTUP_UPDATE_ROOT=""
+export RUSTUP_DIST_SERVER=""

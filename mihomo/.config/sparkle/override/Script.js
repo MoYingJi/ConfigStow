@@ -5,6 +5,9 @@ const processDirect = [
     // "SPlayer",
 ]
 
+const processProxy = [
+]
+
 const domainDirect = [
     "archlinux.org",
     "archlinuxcn.org",
@@ -31,11 +34,19 @@ const domainDirect = [
     "vuejs.org",
 ]
 
+const domainProxy = [
+    "trae.cn",
+    "trae.com.cn",
+    "marscode.cn",
+]
+
 
 const prependRules = [
     "DST-PORT,22,DIRECT", // SSH 端口 22
     ...processDirect.map(process => `PROCESS-NAME,${process},DIRECT`),
     ...domainDirect.map(domain => `DOMAIN-SUFFIX,${domain},DIRECT`),
+    ...processProxy.map(process => `PROCESS-NAME,${process},PROXY`),
+    ...domainProxy.map(domain => `DOMAIN-SUFFIX,${domain},PROXY`),
 ]
 
 const appendRules = [
