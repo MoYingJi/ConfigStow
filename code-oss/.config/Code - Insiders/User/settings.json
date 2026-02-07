@@ -26,22 +26,24 @@
 
     "python.defaultInterpreterPath": "/usr/bin/python",
 
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+    "C_Cpp.default.cppStandard": "gnu++26",
+
+    "rust-analyzer.check.command": "clippy",
+
     "commentAnchors.epic.provideAutoCompletion": false,
     "commentAnchors.tags.provideAutoCompletion": false,
+
+    "redhat.telemetry.enabled": false, // 你想干嘛？
 
     "Lingma.cloudModelAutoTriggerGenerateLength": "disable",
     "Lingma.cloudModelManualTriggerGenerateLength": "long",
     // lingma 会将含有 shebang 但没有后缀的文件视为 plaintext 从而不补全
     "Lingma.cloudModelLanguagesOrFileExtensions": "",
 
-    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
-    "C_Cpp.default.cppStandard": "gnu++26",
+    "trae.chatLanguage": "cn",
 
     "i18n-ally.displayLanguage": "zh-CN",
     "i18n-ally.annotations": true,
     "i18n-ally.extract.keyMaxLength": -1,
-
-    "rust-analyzer.check.command": "clippy",
-
-    "redhat.telemetry.enabled": false, // 你想干嘛？
 }

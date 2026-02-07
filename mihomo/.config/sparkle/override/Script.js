@@ -1,8 +1,9 @@
 // Global Script
 
 const processDirect = [
+    "qbittorrent",
     // "sparkle",
-    // "SPlayer",
+    "SPlayer",
 ]
 
 const processProxy = [
@@ -30,6 +31,7 @@ const domainDirect = [
     // "open.spotify.com",
     "outlook.live.com",
     "outlook.live.net",
+    "skillsmp.com",
     "stevexmh.net",
     "vuejs.org",
 ]

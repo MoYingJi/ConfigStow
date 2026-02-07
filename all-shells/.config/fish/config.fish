@@ -3,7 +3,7 @@
 [ -z "$XDG_CONFIG_DIR" ] && set XDG_CONFIG_DIR "$HOME/.config"
 
 test ! -e "$HOME/.x-cmd.root/local/data/fish/rc.fish" || source "$HOME/.x-cmd.root/local/data/fish/rc.fish"
-test -f "/home/xlings/.xlings_data/xlings-profile.fish"; and source "/home/xlings/.xlings_data/xlings-profile.fish"
+test -f /home/xlings/.xlings_data/xlings-profile.fish; and source /home/xlings/.xlings_data/xlings-profile.fish
 
 set SPEC_SHELL_PROFILE $XDG_CONFIG_DIR/fish/config.fish
 export SPEC_SHELL_PROFILE
