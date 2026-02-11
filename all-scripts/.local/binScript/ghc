@@ -8,4 +8,13 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-git clone "git@github.com:$1.git" "${@:2}"
+repo_name=$1
+git_args=("${@:2}")
+
+repo_name="${repo_name#"https://github.com/"}"
+repo_name="${repo_name#"http://github.com/"}"
+repo_name="${repo_name#"git@github.com:"}"
+
+repo_name="${repo_name%".git"}"
+
+git clone "git@github.com:$repo_name.git" "${git_args[@]}"
