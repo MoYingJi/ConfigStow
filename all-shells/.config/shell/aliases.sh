@@ -84,6 +84,7 @@ alias yt-dlp='yt-dlp \
 
 ## Package Manage
 alias ycr='yc -R'
+alias ycrns='yc -Rns'
 alias ycs='yc -S'
 alias ycq='yc -Q'
 alias ycl='yc -Ql'

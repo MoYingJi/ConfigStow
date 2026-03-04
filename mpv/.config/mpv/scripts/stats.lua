@@ -7,7 +7,8 @@
 ---     need-check-nil,
 ---     param-type-mismatch,
 ---     global-in-non-module,
----     redundant-parameter
+---     redundant-parameter,
+---     invert-if
 
 -- Display some stats.
 --
